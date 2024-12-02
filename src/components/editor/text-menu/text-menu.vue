@@ -59,9 +59,7 @@ const editorCommands = computed(() => {
 <template>
   <teleport to="body">
     <div
-      :class="[
-        'bg-white shadow-sm border-gray-50 border h-10 w-30 flex gap-1 items-center rounded p-1',
-      ]"
+      :class="['bg-white shadow-sm border-gray-50 border h-10 flex gap-1 items-center rounded p-1']"
       ref="floating"
       :style="floatingStyles"
     >
@@ -91,6 +89,16 @@ const editorCommands = computed(() => {
           @change="(color) => editorCommands.onChangeColor(color)"
         >
         </ColorPicker>
+      </Tooltip>
+      <Tooltip content="设置为代码块">
+        <Button
+          theme="default"
+          :variant="editor?.isActive('bold') ? 'base' : 'text'"
+          :disabled="!!editor?.isActive('columns')"
+          @click="editor?.chain().focus().setCodeBlock().run()"
+        >
+          代码块
+        </Button>
       </Tooltip>
     </div>
   </teleport>

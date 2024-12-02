@@ -35,7 +35,7 @@ export const useEditorFrame = () => {
         textMenu.value?.$el === target ||
         tiptapEditorRef.value?.$el.contains(target) ||
         tiptapEditorRef.value?.$el === target ||
-        // 只有弹窗不在#app里
+        // 弹窗不在#app里,点击弹窗也不取消文本框聚焦
         !vueApp?.contains(target)
       ) {
         return

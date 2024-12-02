@@ -21,6 +21,7 @@
     "@tiptap/extension-color": "^2.10.0",
     "@tiptap/extension-document": "^3.0.0",
     "@tiptap/extension-dropcursor": "^3.0.0",
+    "@tiptap/extension-gapcursor": "^2.10.2",
     "@tiptap/extension-hard-break": "^3.0.0",
     "@tiptap/extension-heading": "^2.10.0",
     "@tiptap/extension-history": "^3.0.0",

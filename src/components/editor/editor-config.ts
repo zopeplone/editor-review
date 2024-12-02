@@ -12,9 +12,11 @@ import TaskItem from '@tiptap/extension-task-item'
 import TaskList from '@tiptap/extension-task-list'
 import { Color } from '@tiptap/extension-color'
 import CodeBlockPlugin from './components/code-block/code-block'
+import GapCursor from '@tiptap/extension-gapcursor'
+import History from '@tiptap/extension-history'
 
 export const editorConfig: Partial<EditorOptions> = {
-  content: '<p>I’m running Tiptap with Vue.js. 🎉</p>',
+  // content: '<p>I’m running Tiptap with Vue.js. 🎉</p>',
   extensions: [
     Document,
     Paragraph,
@@ -29,5 +31,7 @@ export const editorConfig: Partial<EditorOptions> = {
     TaskItem,
     Color,
     CodeBlockPlugin,
+    GapCursor,
+    History,
   ],
 }

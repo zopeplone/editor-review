@@ -3,6 +3,7 @@ import { computed, ref } from 'vue'
 import TextMenu from './text-menu/text-menu.vue'
 import TiptapEditor from './TiptapEditor.vue'
 import { useEditorFrame } from './hooks/use-editor-frame'
+import { type Content } from '@tiptap/vue-3'
 
 const {
   isMaskShow,
@@ -13,11 +14,19 @@ const {
   editorInstance,
   handleDbClickMask,
 } = useEditorFrame()
+
+const props = defineProps<{
+  initialValue: Content
+}>()
+const getContent = () => {
+  return editorInstance.value?.getJSON()
+}
+defineExpose({ getContent })
 </script>
 <template>
   <div
     :class="[
-      'w-[300px] h-[300px] mt-[200px] relative border-black border',
+      'w-[300px] h-[300px] mt-[20px] relative border-black border',
       isMaskFocus && 'shadow-md border-[2px]',
     ]"
     ref="wrapper"
@@ -37,7 +46,7 @@ const {
       ref="textMenu"
     >
     </TextMenu>
-    <TiptapEditor ref="tiptapEditorRef"></TiptapEditor>
+    <TiptapEditor ref="tiptapEditorRef" :initialValue="initialValue"></TiptapEditor>
   </div>
 </template>
 <style lang="scss" scoped></style>

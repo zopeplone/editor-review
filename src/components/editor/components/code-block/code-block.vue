@@ -25,4 +25,21 @@ const selectedLanguage = computed({
     <pre><code><node-view-content /></code></pre>
   </node-view-wrapper>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.code-block {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+  border-radius: 10px;
+  margin: 3px 0;
+  select {
+    width: auto;
+    font-size: 12px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 6px;
+    margin-left: auto;
+  }
+}
+</style>

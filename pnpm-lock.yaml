@@ -32,6 +32,9 @@ importers:
       '@tiptap/extension-dropcursor':
         specifier: ^3.0.0
         version: 3.0.0(@tiptap/core@3.0.0(@tiptap/pm@2.9.1))(@tiptap/pm@2.9.1)
+      '@tiptap/extension-gapcursor':
+        specifier: ^2.10.2
+        version: 2.10.2(@tiptap/core@3.0.0(@tiptap/pm@2.9.1))(@tiptap/pm@2.9.1)
       '@tiptap/extension-hard-break':
         specifier: ^3.0.0
         version: 3.0.0(@tiptap/core@3.0.0(@tiptap/pm@2.9.1))
@@ -724,6 +727,12 @@ packages:
     peerDependencies:
       '@tiptap/core': ^3.0.0
       '@tiptap/pm': ^3.0.0
+
+  '@tiptap/extension-gapcursor@2.10.2':
+    resolution: {integrity: sha512-Uj2hIYC5zRPGI9xBYFwtld8JrZ8YZXEqO7sN5VcOwt12cnSmvzga86jUKpj3WOMP/8KamLWW8m8UKHd7Qg1kMA==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+      '@tiptap/pm': ^2.7.0
 
   '@tiptap/extension-hard-break@3.0.0':
     resolution: {integrity: sha512-tnCTJXZj7sLkfGQNhTygTS5k3DrZT/pZQGiEHoGuudLlicXcCombTDS0OQHkVju5sU9jXpRQ+EsR2GT3DT7AfQ==}
@@ -2936,6 +2945,11 @@ snapshots:
       '@tiptap/core': 3.0.0(@tiptap/pm@2.9.1)
       '@tiptap/pm': 2.9.1
       tippy.js: 6.3.7
+
+  '@tiptap/extension-gapcursor@2.10.2(@tiptap/core@3.0.0(@tiptap/pm@2.9.1))(@tiptap/pm@2.9.1)':
+    dependencies:
+      '@tiptap/core': 3.0.0(@tiptap/pm@2.9.1)
+      '@tiptap/pm': 2.9.1
 
   '@tiptap/extension-hard-break@3.0.0(@tiptap/core@3.0.0(@tiptap/pm@2.9.1))':
     dependencies:
