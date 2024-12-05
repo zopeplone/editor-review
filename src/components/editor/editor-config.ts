@@ -14,6 +14,8 @@ import { Color } from '@tiptap/extension-color'
 import CodeBlockPlugin from './components/code-block/code-block'
 import GapCursor from '@tiptap/extension-gapcursor'
 import History from '@tiptap/extension-history'
+import SmartTextPlugin from './components/smart-text/smart-text-plugin'
+import Dropcursor from '@tiptap/extension-dropcursor'
 
 export const editorConfig: Partial<EditorOptions> = {
   // content: '<p>I’m running Tiptap with Vue.js. 🎉</p>',
@@ -33,5 +35,7 @@ export const editorConfig: Partial<EditorOptions> = {
     CodeBlockPlugin,
     GapCursor,
     History,
+    SmartTextPlugin,
+    Dropcursor,
   ],
 }

@@ -3,6 +3,7 @@
   flex-grow: 1;
   overflow: hidden;
   padding: 3px;
+
   h1 {
     font-size: 40px;
     font-weight: bold;
@@ -84,5 +85,8 @@
     .hljs-strong {
       font-weight: 700;
     }
+  }
+  ::selection {
+    background-color: antiquewhite;
   }
 }

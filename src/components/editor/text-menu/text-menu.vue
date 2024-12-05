@@ -93,11 +93,20 @@ const editorCommands = computed(() => {
       <Tooltip content="设置为代码块">
         <Button
           theme="default"
-          :variant="editor?.isActive('bold') ? 'base' : 'text'"
+          :variant="editor?.isActive('codeblock') ? 'base' : 'text'"
           :disabled="!!editor?.isActive('columns')"
           @click="editor?.chain().focus().setCodeBlock().run()"
         >
           代码块
+        </Button>
+      </Tooltip>
+      <Tooltip>
+        <Button
+          theme="default"
+          :variant="editor?.isActive('smartText') ? 'base' : 'text'"
+          @click="editor?.chain().focus().addSmartText({}).run()"
+        >
+          智能文本
         </Button>
       </Tooltip>
     </div>
