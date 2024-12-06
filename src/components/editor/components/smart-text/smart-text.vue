@@ -27,7 +27,7 @@ const handleDbClick = () => {
   <NodeViewWrapper class="inline-block">
     <span
       contenteditable="false"
-      class="bg-transparent cursor-pointer select-text rounded-sm transition hover:bg-slate-300 px-1"
+      class="smart-text bg-transparent cursor-pointer select-text rounded-sm transition hover:bg-slate-300 px-1"
       data-drag-handle
       draggable="true"
       @click="handleClick"
@@ -38,8 +38,12 @@ const handleDbClick = () => {
   </NodeViewWrapper>
 </template>
 <style lang="scss" scoped>
-.ProseMirror-selectednode span,
-::selection {
+.ProseMirror-selectednode .smart-text {
   background-color: antiquewhite;
+}
+.smart-text {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-color: #000;
 }
 </style>
